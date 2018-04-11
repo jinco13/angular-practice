@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  selected: Book;
+  books = [
+    {
+      title: 'アジャイルソフトウェアの奥義',
+      price: 3000
+    },
+    {
+      title: 'アルゴリズム図鑑',
+      price: 2000
+    }
+  ];
+
+  onClickBook(item: any) {
+    console.log(item);
+    this.selected = item;
+  }
 }
