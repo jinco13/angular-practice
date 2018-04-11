@@ -20,6 +20,10 @@ export class AppComponent {
     }
   ];
 
+  goToSetting() {
+
+  }
+
   onClickBook(item: any) {
     console.log(item);
     this.selected = item;
